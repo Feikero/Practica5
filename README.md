@@ -108,12 +108,12 @@ void loop() {
 ```
 En aquest loop, sent la part principal del programa, es fa un escaneig per veure els dispositius connectats al bus I2C, dintre d'aquest loop es diferencien diverses parts:
 1. **Variables:**
-  - **'byte error, address;:'** Declara variables per guardar errors y direccions I2C.
-  - **'int nDevices;:'** Declara una altra variable per portar el conteig del número de dispositius I2C trobats.
+   - **'byte error, address;:'** Declara variables per guardar errors y direccions I2C.
+   - **'int nDevices;:'** Declara una altra variable per portar el conteig del número de dispositius I2C trobats.
 
 2. **Inicio del escaneo:**
-  - **'Serial.println("Scanning...");:'** Mostra per pantalla "Scanning..." al monitor serial.
-  - **'nDevices = 0;:'** Inicialitza el conteig de dispositius a 0.
+   - **'Serial.println("Scanning...");:'** Mostra per pantalla "Scanning..." al monitor serial.
+   - **'nDevices = 0;:'** Inicialitza el conteig de dispositius a 0.
 
 
 ## Part B
