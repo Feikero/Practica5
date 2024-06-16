@@ -1,4 +1,4 @@
-# Practica5
+# Practica 5
 ## Part A
 ### Codi en Línea
 ```cpp
