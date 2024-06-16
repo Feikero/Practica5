@@ -115,6 +115,22 @@ En aquest loop, sent la part principal del programa, es fa un escaneig per veure
    - **'Serial.println("Scanning...");:'** Mostra per pantalla "Scanning..." al monitor serial.
    - **'nDevices = 0;:'** Inicialitza el conteig de dispositius a 0.
 
+3. **Bucle d'escaneig:**
+   
+   - **'address = 1; address < 127; address++'** El bucle for passa per totes les direccions posibles de l'I2C (de 1 a 126).
+   - **'Wire.beginTransmission(address);:'** Inicia una transmissió I2C a la direcció especificada.
+   - **'error = Wire.endTransmission();:'** Termina la transmissió y retorna un codi d'error.
+   - **'Serial.println(address);:'** Mostra per pantalla la direcció actual al monitor serial.
+   - **En cas de que no hi hagi error ('error == 0'):**
+     - Mostra per pantalla la direcció del dispositiu I2C trobat.
+     - Augmenta el conteig del número de dispositius.
+   - **Si es detecta un error desconegut ('error == 4'):**
+     - Mostra per pantalla un missatge d'error indicant la direcció que dona problemes
+4. **Resultats de l'escaneig:**
+   - **'if (nDevices == 0) Serial.println("No I2C devices found\n");:'** Si no es troben dispositius, mostra el missatge "No I2C devices found\n".
+   - **'else Serial.println("done\n");:'** Si es troben dispositius, mostra "done".
+5. **'delay(5000);:'** Fa una pausa de 5000 milisegons (5 segons).
+
 
 ## Part B
 ### Codi en Línea
